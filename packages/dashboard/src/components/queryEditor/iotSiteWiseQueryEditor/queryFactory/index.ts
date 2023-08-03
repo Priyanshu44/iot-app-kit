@@ -1,0 +1,1 @@
+export { queryFactory } from './queryFactory';

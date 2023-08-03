@@ -1,0 +1,1 @@
+export { useAssetsCollection } from './useAssetsCollection';

@@ -1,0 +1,1 @@
+export { useParentAssetId } from './useParentAssetId';

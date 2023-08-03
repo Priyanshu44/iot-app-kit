@@ -5,6 +5,7 @@ import Box from '@cloudscape-design/components/box';
 import SpaceBetween from '@cloudscape-design/components/space-between';
 
 import { selectedRect } from '~/util/select';
+
 /**
  * Component imports
  */
@@ -16,9 +17,10 @@ import UserSelection from '../userSelection';
 import { PropertiesPanel } from '../propertiesPanel';
 import ComponentPalette from '../palette';
 import CustomDragLayer from '../dragLayer';
-import { ResourceExplorer } from '../resourceExplorer';
 import ViewportSelection from '../viewportSelection';
 import Actions from '../actions';
+import { QueryEditor } from '../queryEditor';
+import { useClients } from '../dashboard/clientContext';
 
 /**
  * Store imports
@@ -61,6 +63,12 @@ const defaultUserSelect: CSSProperties = { userSelect: 'initial' };
 const disabledUserSelect: CSSProperties = { userSelect: 'none' };
 
 const InternalDashboard: React.FC<InternalDashboardProperties> = ({ onSave, editable, propertiesSections }) => {
+  const { iotSiteWiseClient } = useClients();
+
+  if (iotSiteWiseClient == null) {
+    return null;
+  }
+
   /**
    * disable user select styles on drag to prevent highlighting of text under the pointer
    */
@@ -246,7 +254,7 @@ const InternalDashboard: React.FC<InternalDashboardProperties> = ({ onSave, edit
         </Box>
       </div>
       <ResizablePanes
-        leftPane={<ResourceExplorer />}
+        leftPane={<QueryEditor client={iotSiteWiseClient} />}
         centerPane={
           <div className='display-area' ref={(el) => setViewFrameElement(el || undefined)}>
             <GestureableGrid {...gridProps}>
