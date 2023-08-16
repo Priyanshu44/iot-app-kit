@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LineWidgetComponent Rendering should render with {"lineStyle":"dashed","color":"black","thickness":5} correctly 1`] = `
+<div>
+  <div
+    class="fit-full"
+  >
+    <svg
+      pointer-events="none"
+      style="width: 100%; height: 100%;"
+    >
+      <line
+        stroke="black"
+        stroke-dasharray="10,5"
+        stroke-width="5"
+        x1="25"
+        x2="375"
+        y1="200"
+        y2="200"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`LineWidgetComponent Rendering should render with {"lineStyle":"dashed","color":"blue","thickness":10} correctly 1`] = `
+<div>
+  <div
+    class="fit-full"
+  >
+    <svg
+      pointer-events="none"
+      style="width: 100%; height: 100%;"
+    >
+      <line
+        stroke="blue"
+        stroke-dasharray="10,5"
+        stroke-width="10"
+        x1="25"
+        x2="375"
+        y1="200"
+        y2="200"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`LineWidgetComponent Rendering should render with {"lineStyle":"dotted","color":"black","thickness":5} correctly 1`] = `
+<div>
+  <div
+    class="fit-full"
+  >
+    <svg
+      pointer-events="none"
+      style="width: 100%; height: 100%;"
+    >
+      <line
+        stroke="black"
+        stroke-dasharray="3,3"
+        stroke-width="5"
+        x1="25"
+        x2="375"
+        y1="200"
+        y2="200"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`LineWidgetComponent Rendering should render with {"lineStyle":"dotted","color":"green","thickness":15} correctly 1`] = `
+<div>
+  <div
+    class="fit-full"
+  >
+    <svg
+      pointer-events="none"
+      style="width: 100%; height: 100%;"
+    >
+      <line
+        stroke="green"
+        stroke-dasharray="3,3"
+        stroke-width="15"
+        x1="25"
+        x2="375"
+        y1="200"
+        y2="200"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`LineWidgetComponent Rendering should render with {"lineStyle":"solid","color":"black","thickness":5} correctly 1`] = `
+<div>
+  <div
+    class="fit-full"
+  >
+    <svg
+      pointer-events="none"
+      style="width: 100%; height: 100%;"
+    >
+      <line
+        stroke="black"
+        stroke-dasharray="1,0"
+        stroke-width="5"
+        x1="25"
+        x2="375"
+        y1="200"
+        y2="200"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`LineWidgetComponent Rendering should render with {"lineStyle":"solid","color":"red","thickness":5} correctly 1`] = `
+<div>
+  <div
+    class="fit-full"
+  >
+    <svg
+      pointer-events="none"
+      style="width: 100%; height: 100%;"
+    >
+      <line
+        stroke="red"
+        stroke-dasharray="1,0"
+        stroke-width="5"
+        x1="25"
+        x2="375"
+        y1="200"
+        y2="200"
+      />
+    </svg>
+  </div>
+</div>
+`;
