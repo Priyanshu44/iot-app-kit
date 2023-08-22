@@ -20,8 +20,12 @@ export const MOCK_TIME_SERIES_DATA_QUERY = mockTimeSeriesDataQuery([
     dataStreams: new Array(NUM_STREAMS + 1).fill(0).map((_, i) => ({
       ...DATA_STREAM,
       data: [
-        { x: new Date(2000, 5, 13).getTime(), y: (10 * i) ^ 2 },
-        { x: new Date(2005, 6, 13).getTime(), y: (2 * (10 * i)) ^ 2 },
+        { x: new Date(2000, 5, 13).getTime(), y: (10 * i + 1) ^ 2 },
+        { x: new Date(2001, 5, 13).getTime(), y: (10 * i) ^ 4 },
+        { x: new Date(2002, 5, 13).getTime(), y: (10 * i) ^ 5 },
+        { x: new Date(2003, 5, 13).getTime(), y: (10 * i) ^ 3 },
+        { x: new Date(2004, 5, 13).getTime(), y: (10 * i) ^ 6 },
+        { x: new Date(2005, 6, 13).getTime(), y: (10 * i) ^ 2 },
       ],
       name: `stream-${i}`,
       refId: `stream-${i}`,
