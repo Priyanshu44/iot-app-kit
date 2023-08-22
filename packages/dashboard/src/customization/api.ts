@@ -5,7 +5,7 @@ import { WidgetPropertiesGeneratorMap } from './widgetPropertiesGeneratorMap';
 import type { DashboardWidget } from '~/types';
 import plugins from '~/customization/pluginsConfiguration';
 import { useHasFeatureFlag } from '@iot-app-kit/react-components';
-import { rectanglePlugin } from './widgets';
+import { ellipsePlugin, rectanglePlugin } from './widgets';
 import { linePlugin } from './widgets/lineSymbol/plugin';
 import { trianglePlugin } from './widgets';
 
@@ -79,5 +79,6 @@ export const useDashboardPlugins = () => {
     rectanglePlugin.install({ registerWidget });
     linePlugin.install({ registerWidget });
     trianglePlugin.install({ registerWidget });
+    ellipsePlugin.install({ registerWidget });
   }
 };
