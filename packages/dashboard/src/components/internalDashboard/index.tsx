@@ -3,7 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { WebglContext, TrendCursorSync, TimeSync, TimeSelection } from '@iot-app-kit/react-components';
 import Box from '@cloudscape-design/components/box';
 import SpaceBetween from '@cloudscape-design/components/space-between';
-import { colorBackgroundCellShaded } from '@cloudscape-design/design-tokens';
+import {
+  colorBackgroundCellShaded,
+  colorBorderDividerDefault,
+  spaceScaledXxxs,
+} from '@cloudscape-design/design-tokens';
 
 import { selectedRect } from '~/util/select';
 
@@ -207,10 +211,14 @@ const InternalDashboard: React.FC<InternalDashboardProperties> = ({ onSave, edit
     return null;
   }
 
+  const dashboardToolbarBottomBorder = {
+    borderBottom: `${spaceScaledXxxs} solid ${colorBorderDividerDefault}`,
+  };
+
   const EditComponent = (
     <div className='dashboard' style={userSelect}>
       <CustomDragLayer onDrag={(isDragging) => setUserSelect(isDragging ? disabledUserSelect : defaultUserSelect)} />
-      <div className='dashboard-toolbar'>
+      <div style={dashboardToolbarBottomBorder} className='dashboard-toolbar'>
         <Box float='left' padding='xs'>
           <ComponentPalette />
         </Box>
@@ -253,7 +261,7 @@ const InternalDashboard: React.FC<InternalDashboardProperties> = ({ onSave, edit
   );
   const ReadOnlyComponent = (
     <div className='dashboard'>
-      <div className='dashboard-toolbar-read-only'>
+      <div style={dashboardToolbarBottomBorder} className='dashboard-toolbar-read-only'>
         <Box float='right' padding='s'>
           <SpaceBetween size='s' direction='horizontal'>
             <TimeSelection />
