@@ -1,4 +1,3 @@
-import ExpandableSection from '@cloudscape-design/components/expandable-section';
 import FormField from '@cloudscape-design/components/form-field';
 import Select from '@cloudscape-design/components/select';
 import type { FC } from 'react';
@@ -14,20 +13,20 @@ const typeOptions = [
 ] as const;
 
 type TypeSectionOptions = {
+  disabled?: boolean;
   type: string | undefined;
   updateType: (type: string) => void;
 };
 
-export const TypeSection: FC<TypeSectionOptions> = ({ type, updateType }) => {
+export const LineTypeSection: FC<TypeSectionOptions> = ({ disabled = false, type, updateType }) => {
   return (
-    <ExpandableSection headerText='Line widget' defaultExpanded>
-      <FormField label='Type'>
-        <Select
-          selectedOption={typeOptions.find(({ value }) => value === type) ?? null}
-          onChange={({ detail }) => updateType(detail.selectedOption.value ?? defaultTypeOption.value)}
-          options={typeOptions}
-        />
-      </FormField>
-    </ExpandableSection>
+    <FormField label='Line type'>
+      <Select
+        disabled={disabled}
+        selectedOption={typeOptions.find(({ value }) => value === type) ?? null}
+        onChange={({ detail }) => updateType(detail.selectedOption.value ?? defaultTypeOption.value)}
+        options={typeOptions}
+      />
+    </FormField>
   );
 };
