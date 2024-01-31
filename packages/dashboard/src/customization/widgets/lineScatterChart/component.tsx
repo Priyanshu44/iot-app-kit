@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Chart, useViewport } from '@iot-app-kit/react-components';
+import { Chart, useViewport } from '../../../../../react-components/src';
 // FIXME: Export ChartOptions from @iot-app-kit/react-components
 // FIXME: Export ChartStyleSettingsOptions from @iot-app-kit/react-components
 // eslint-disable-next-line no-restricted-imports
@@ -143,6 +143,7 @@ const LineScatterChartWidgetComponent: React.FC<LineScatterChartWidget> = (
   widget
 ) => {
   const { viewport } = useViewport();
+  
   const dispatch = useDispatch();
 
   const readOnly = useSelector((state: DashboardState) => state.readOnly);

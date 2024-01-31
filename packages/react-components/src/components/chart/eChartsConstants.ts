@@ -129,4 +129,10 @@ export const DEFAULT_CHART_OPTION: EChartsOption = {
   yAxis: [DEFAULT_Y_AXIS],
   grid: DEFAULT_GRID,
   tooltip: DEFAULT_TOOLTIP,
+  timeline: {
+    axisType: "time",
+    autoPlay: false,
+    data: ["2002-01-01", "2003-01-01"],
+    symbol: "none"
+  }
 };

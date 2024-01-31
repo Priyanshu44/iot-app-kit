@@ -214,15 +214,22 @@ const BaseChart = ({
             <MultiYAxisLegend datastreams={dataStreams} height={chartHeight} />
           </div>
           {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
-          <div
-            ref={ref}
-            onMouseDown={handleMouseDown}
-            className='base-chart-element'
-            style={{
-              height: chartHeight,
-              width: chartWidth,
-            }}
-          />
+          
+          /* for custom timeline */
+          {/* <div style={{display: 'flex' , flexDirection: 'column'}}> */}
+            <div
+              ref={ref}
+              onMouseDown={handleMouseDown}
+              className='base-chart-element'
+              style={{
+                height: chartHeight - 20,
+                width: chartWidth,
+              }}
+            />
+            /* for custom timeline */
+              {/* <div style={{borderTop: '1px solid #e9ebed'}}>Hello</div>  */}
+            {/* </div> */}
+          
           {/*TODO: should not show when in dashboard */}
           {showContextMenu && (
             <ChartContextMenu
